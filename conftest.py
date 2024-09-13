@@ -6,6 +6,7 @@ from faker import Faker
 @pytest.fixture(scope="session")
 def api_client():
     client = APIClient()
+    client.ping()
     client.auth()
     return client
 
